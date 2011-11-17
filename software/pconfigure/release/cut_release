@@ -1,0 +1,5 @@
+version="$1"
+
+git clone git.dabbelt.com:palmer/pconfigure pconfigure-$version
+tar -c pconfigure-$version | bzip2 > pconfigure-$version.tar.bz2
+rm -rf pconfigure-$version
