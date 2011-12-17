@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for x in $(/bin/ls | grep -- -)
+do
+    ./rebuild $x
+done
+

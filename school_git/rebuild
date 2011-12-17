@@ -9,7 +9,7 @@ cd ~/.local/share/latex/school-personal
 git pull
 cd "$d"
 
-cd 21-online
+cd $1
 git pull
 tek
 make
