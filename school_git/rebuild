@@ -1,0 +1,18 @@
+#!/bin/bash
+
+d=`pwd`
+
+cd ~/.local/share/latex/school
+git pull
+cd ~/.local/share/latex/school-personal
+git pull
+cd "$d"
+
+cd 21-online
+git pull
+tek
+make
+tar -c `find -iname "*.pdf"` | tar -xC ~/public_html/school
+cd "$d"
+
+chmod oug+rX -R ~/public_html/school

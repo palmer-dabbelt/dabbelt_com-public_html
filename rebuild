@@ -6,3 +6,8 @@ d=`pwd`
 cd ~/work/resume/general
 make
 cd "$d"
+
+mkdir school
+cd ~/public_html/school_git
+./rebuild
+cd "$d"
