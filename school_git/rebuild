@@ -12,7 +12,7 @@ cd 21-online
 git pull
 tek
 make
-tar -c `find -iname "*.pdf"` | tar -xC ~/public_html/school
+tar -cv `find -iname "*.pdf"` | tar -xC ~/public_html/school
 cd "$d"
 
 chmod oug+rX -R ~/public_html/school
