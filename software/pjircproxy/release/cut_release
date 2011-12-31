@@ -1,0 +1,6 @@
+version="$1"
+
+git clone git.dabbelt.com:palmer/pjircproxy pjircproxy-$version
+tar -c pjircproxy-$version | bzip2 > pjircproxy-$version.tar.bz2
+chmod oug+r pjircproxy-$version.tar.bz2
+rm -rf pjircproxy-$version
