@@ -4,39 +4,10 @@
   <repo priority="50" quality="experimental" status="unofficial">
     <name>palmerdabbelt</name>
     <description>Palmer Dabbelt's Overlay</description>
-    <homepage>http://dabbelt.com/~palmer/software/portage</homepage>
+    <homepage>https://sourceforge.net/u/palmerdabbelt/portage</homepage>
     <owner>
       <email>palmer.dabbelt@gmail.com</email>
     </owner>
-    <source type="git">git://dabbelt.com/palmer/portage</source>
-  </repo>
-  <repo priority="50" quality="experimental" status="official">
-    <name>sunrise</name>
-    <description>Ebuilds for bugs assigned to maintainer-wanted</description>
-    <homepage>http://overlays.gentoo.org/proj/sunrise</homepage>
-    <owner>
-      <email>sunrise@gentoo.org</email>
-    </owner>
-    <source type="svn">svn://overlays.gentoo.org/proj/sunrise/reviewed/</source>
-    <feed>http://overlays.gentoo.org/proj/sunrise/timeline</feed>
-  </repo>
-  <repo priority="50" quality="experimental" status="unofficial">
-    <name>palmerdabbelt-prefix</name>
-    <description>Palmer Dabbelt's Prefix Overlay</description>
-    <homepage>http://dabbelt.com/~palmer/software/portage</homepage>
-    <owner>
-      <email>palmer.dabbelt@gmail.com</email>
-    </owner>
-    <source type="git">git://dabbelt.com/palmer/portage-prefix</source>
-  </repo>
-  <repo priority="50" quality="experimental" status="official">
-    <name>sunrise</name>
-    <description>Ebuilds for bugs assigned to maintainer-wanted</description>
-    <homepage>http://overlays.gentoo.org/proj/sunrise</homepage>
-    <owner>
-      <email>sunrise@gentoo.org</email>
-    </owner>
-    <source type="svn">svn://overlays.gentoo.org/proj/sunrise/reviewed/</source>
-    <feed>http://overlays.gentoo.org/proj/sunrise/timeline</feed>
+    <source type="git">git://git.code.sf.net/u/palmerdabbelt/portage</source>
   </repo>
 </repositories>
