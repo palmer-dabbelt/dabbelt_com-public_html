@@ -1,6 +1,6 @@
 version="$1"
 
-git clone git.dabbelt.com:palmer/tek tek-$version
+git clone git.dabbelt.com:palmer/software/tek tek-$version
 tar -c tek-$version | bzip2 > tek-$version.tar.bz2
 chmod oug+r tek-$version.tar.bz2
 rm -rf tek-$version
