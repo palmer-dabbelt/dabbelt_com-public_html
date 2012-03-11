@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo -e "Content-type: text/html\r\n\r\n"
+
+echo "<html>"
+echo "<head>"
+echo "<title>qstat</title>"
+echo "</head>"
+
+echo "<body>"
+
+echo "<pre>"
+echo "\$ date"
+date
+echo ""
+echo "\$ qstat"
+`which qstat` | while read line
+do
+    echo "$line" | sed "s/ /\&nbsp/g"
+done
+echo "</pre>"
+
+echo "</body>"
+
+echo "</html>"
