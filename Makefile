@@ -1,9 +1,14 @@
-.PHONY: all all-othermake
+.PHONY: all all-reentry clean
 
-all: all-othermake
+all:
+	make -C ~/files/resume/general
+	make all-reentry
 
-all-othermake:
-	make -C ~/files/resume/general/
+clean:
+	rm resume.pdf.gpg || true
+	rm resume.pdf || true
+
+all-reentry: resume.pdf.gpg
 
 resume.pdf: ~/files/resume/general/resume.pdf
 	cp ~/files/resume/general/resume.pdf .
