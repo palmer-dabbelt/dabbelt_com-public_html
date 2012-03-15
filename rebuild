@@ -3,11 +3,6 @@ set -x
 
 d=`pwd`
 
-cd ~/work/resume/general
+cd ~/files/resume/general
 make
-cd "$d"
-
-mkdir school
-cd ~/public_html/school_git
-./rebuild
 cd "$d"
