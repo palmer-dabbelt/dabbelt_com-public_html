@@ -1,8 +1,0 @@
-#!/bin/bash
-set -x
-
-d=`pwd`
-
-cd ~/files/resume/general
-make
-cd "$d"
