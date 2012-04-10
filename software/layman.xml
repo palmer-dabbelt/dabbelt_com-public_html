@@ -8,6 +8,6 @@
     <owner>
       <email>palmer.dabbelt@gmail.com</email>
     </owner>
-    <source type="git">git://git.code.sf.net/u/palmerdabbelt/portage</source>
+    <source type="git">git://github.com/palmer-dabbelt/portage.git</source>
   </repo>
 </repositories>
