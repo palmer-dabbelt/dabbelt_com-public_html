@@ -11,18 +11,86 @@
     <p>
       This page should list all the contributions I've made to open source projects.  There's so many different bug trackers that I'd like a centralized place to keep track of them to ensure that they all end up getting resolved.  As such, unresolved bugs will be listed first and then moved later.<br/>
       <br/>
+
+
+
+
       <h1>Unresolved Bugs</h1>
+
+
+
+
+      <b>MuPDF: Save the clipboard as an image</b><br/>
+      <a href="http://bugs.ghostscript.com/show_bug.cgi?id=692932">
+	http://bugs.ghostscript.com/show_bug.cgi?id=692932</a><br/>
+      Submitted: March 17, 2012<br/>
+      <br/>
+      Lulu heavily used Okular's "Save Selection as Image" functionality for her homework assignments.  We'd recently switch the machines to XFCE and I didn't want to pull in a whole bunch of KDE4 junk so I started looking for an alternate PDF reader with the same functionality.  MuPDF seemed to be easily hackable, so I decided to just add the functionality.<br/>
+      <br/>
+      I submitted a patch that implemented the requested functionality, but it seems the developer is not particularly enthuiastic about taking the patch.  It's proving pretty easy to mantain out-of-tree, so I'm just going to stick with it. <br/>
+      <br/>
+
+
+
+      <b>Gentoo: x11-libs/vte fails running automake</b><br/>
+      <a href="https://bugs.gentoo.org/show_bug.cgi?id=411081">
+	https://bugs.gentoo.org/show_bug.cgi?id=411081</a><br/>
+      Submitted: April 6, 2012<br/>
+      <br/>
+      This was a pretty uninteresting missing dependency from a Gentoo package.  It seems odd that nobody wants to take the fix, though -- it seems to be pretty obviously a missing dep.  I'll look into it in a week or two.<br/>
+      <br/>
+
+
+
+      <b>Gentoo: app-text/mupdf-1.0_rc1 needs >=media-libs/openjpeg-1.5</b>
+      <br/>
+      <a href="https://bugs.gentoo.org/show_bug.cgi?id=411373">
+	https://bugs.gentoo.org/show_bug.cgi?id=411373</a><br/>
+      Submitted: April 9, 2012<br/>
+      <br/>
+      Upstream started depending on a newer version of a specific library so I updated the dependency list in Gentoo's package<br/>
+      <br/>
+
+
+
+      <b>OpenJPEG: incompatible implicit declaration of built-in function 'lrintf'</b><br/>
+      <a href="http://code.google.com/p/openjpeg/issues/detail?id=144">
+	http://code.google.com/p/openjpeg/issues/detail?id=144</a><br/>
+      Submitted: April 11, 2012<br/>
+      <br/>
+      Fixes a simple compile warning due to not having C99 mode.  So far upstream has been unresponsive.<br/>
+      <br/>
+      
+
+
+
+      <br/> <br/> <br/> <br/>
       <h1>Resolved Bugs</h1>
+
+
+
+
       <b>Evolution: Workaround Improper GB-2312 Mail Encodings</b><br>
       <a href="https://bugzilla.gnome.org/show_bug.cgi?id=666896">
-	https://bugzilla.gnome.org/show_bug.cgi?id=666896
-      </a><br/>
+	https://bugzilla.gnome.org/show_bug.cgi?id=666896</a><br/>
       Submitted: December 27, 2011<br/>
       Resolved: April 11, 2012<br/>
       <br/>
       Lulu discovered that Evolution didn't set the correct character encoding all the time for some Chinese encodings.  The problem actually stems from the fact that there are 2 Chinese character encodings, one which is a superset of the other.  Some clients would specify the subset as the encoding while including characters only valid in the superset.  Evolution would correctly print out garbage in this case, but as many other mail clients seem to have a workaround for this specific case it seemed reasonable for Evolution to have the workaround as well.<br/>
       <br/>
       I submitted a patch that changed the encoding to the superset whenever the subset was detected.  This was fairly simple because Evolution already had an encoding mapping list, so I just changed it.<br/>
+      <br/>
+
+
+
+      <b>Gentoo: media-libs/openjpeg-1.5.0 missing from gentoo_prefix</b><br/>
+      <a href="https://bugs.gentoo.org/show_bug.cgi?id=411519">
+	https://bugs.gentoo.org/show_bug.cgi?id=411519</a><br/>
+      Submitted: April 10, 2012<br/>
+      Resolved: April 11, 2012<br/>
+      <br/>
+      Gentoo prefix used to have a forked OpenJPEG package that started lagging behind the official Gentoo tree.  I noticed the old build and commented that the fork has probably been obseleted due to a move to cmake.  Prefix decided to use the un-fork the package.<br/>
+      <br/>
       
     </p>
   </body>
