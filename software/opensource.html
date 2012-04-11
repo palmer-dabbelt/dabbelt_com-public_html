@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Palmer Dabbelt's Contributions to Open Source Projects</title>
+  </head>
+
+  <body>
+    <p>
+      This page should list all the contributions I've made to open source projects.  There's so many different bug trackers that I'd like a centralized place to keep track of them to ensure that they all end up getting resolved.  As such, unresolved bugs will be listed first and then moved later.<br/>
+      <br/>
+      <h1>Unresolved Bugs</h1>
+      <h1>Resolved Bugs</h1>
+      <b>Evolution: Workaround Improper GB-2312 Mail Encodings</b><br>
+      <a href="https://bugzilla.gnome.org/show_bug.cgi?id=666896">
+	https://bugzilla.gnome.org/show_bug.cgi?id=666896
+      </a><br/>
+      Submitted: December 27, 2011<br/>
+      Resolved: April 11, 2012<br/>
+      <br/>
+      Lulu discovered that Evolution didn't set the correct character encoding all the time for some Chinese encodings.  The problem actually stems from the fact that there are 2 Chinese character encodings, one which is a superset of the other.  Some clients would specify the subset as the encoding while including characters only valid in the superset.  Evolution would correctly print out garbage in this case, but as many other mail clients seem to have a workaround for this specific case it seemed reasonable for Evolution to have the workaround as well.<br/>
+      <br/>
+      I submitted a patch that changed the encoding to the superset whenever the subset was detected.  This was fairly simple because Evolution already had an encoding mapping list, so I just changed it.<br/>
+      
+    </p>
+  </body>
+</html>
