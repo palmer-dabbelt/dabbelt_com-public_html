@@ -17,9 +17,6 @@
 
       <h1>Unresolved Bugs</h1>
 
-
-
-
       <b>MuPDF: Save the clipboard as an image</b><br/>
       <a href="http://bugs.ghostscript.com/show_bug.cgi?id=692932">
 	http://bugs.ghostscript.com/show_bug.cgi?id=692932</a><br/>
@@ -30,8 +27,6 @@
       I submitted a patch that implemented the requested functionality, but it seems the developer is not particularly enthuiastic about taking the patch.  It's proving pretty easy to mantain out-of-tree, so I'm just going to stick with it. <br/>
       <br/>
 
-
-
       <b>Gentoo: x11-libs/vte fails running automake</b><br/>
       <a href="https://bugs.gentoo.org/show_bug.cgi?id=411081">
 	https://bugs.gentoo.org/show_bug.cgi?id=411081</a><br/>
@@ -39,8 +34,6 @@
       <br/>
       This was a pretty uninteresting missing dependency from a Gentoo package.  It seems odd that nobody wants to take the fix, though -- it seems to be pretty obviously a missing dep.  I'll look into it in a week or two.<br/>
       <br/>
-
-
 
       <b>OpenJPEG: incompatible implicit declaration of built-in function 'lrintf'</b><br/>
       <a href="http://code.google.com/p/openjpeg/issues/detail?id=144">
@@ -52,22 +45,8 @@
 
 
 
-      <b>Gentoo: Missing >=dev-libs/glib-2.31.0 in prefix tree</b><br/>
-      <a href="https://bugs.gentoo.org/show_bug.cgi?id=412455">
-	https://bugs.gentoo.org/show_bug.cgi?id=412455</a><br/>
-      Submitted: April 17, 2012<br/>
-      <br/>
-      This was pretty straight-forward, there were just a few patches that needed to be updated.<br/>
-      <br/>
-      
-
-
-
       <br/> <br/> <br/> <br/>
       <h1>Resolved Bugs</h1>
-
-
-
 
       <b>Evolution: Workaround Improper GB-2312 Mail Encodings</b><br>
       <a href="https://bugzilla.gnome.org/show_bug.cgi?id=666896">
@@ -80,8 +59,6 @@
       I submitted a patch that changed the encoding to the superset whenever the subset was detected.  This was fairly simple because Evolution already had an encoding mapping list, so I just changed it.<br/>
       <br/>
 
-
-
       <b>Gentoo: media-libs/openjpeg-1.5.0 missing from gentoo_prefix</b><br/>
       <a href="https://bugs.gentoo.org/show_bug.cgi?id=411519">
 	https://bugs.gentoo.org/show_bug.cgi?id=411519</a><br/>
@@ -90,8 +67,6 @@
       <br/>
       Gentoo prefix used to have a forked OpenJPEG package that started lagging behind the official Gentoo tree.  I noticed the old build and commented that the fork has probably been obseleted due to a move to cmake.  Prefix decided to use the un-fork the package.<br/>
       <br/>
-
-
 
       <b>Gentoo: app-text/mupdf-1.0_rc1 needs >=media-libs/openjpeg-1.5</b>
       <br/>
@@ -102,6 +77,14 @@
       <br/>
       Upstream started depending on a newer version of a specific library so I updated the dependency list in Gentoo's package<br/>
       <br/>      
-    </p>
+
+      <b>Gentoo: Missing >=dev-libs/glib-2.31.0 in prefix tree</b><br/>
+      <a href="https://bugs.gentoo.org/show_bug.cgi?id=412455">
+	https://bugs.gentoo.org/show_bug.cgi?id=412455</a><br/>
+      Submitted: April 17, 2012<br/>
+      <br/>
+      This was pretty straight-forward, there were just a few patches that needed to be updated.<br/>
+      <br/>
+      </p>
   </body>
 </html>
