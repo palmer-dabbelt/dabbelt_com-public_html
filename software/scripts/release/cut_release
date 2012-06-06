@@ -1,6 +1,6 @@
 version="$1"
 
-git clone git.dabbelt.com:palmer/software/local scripts-$version
-tar -c scripts-$version | bzip2 > scripts-$version.tar.bz2
-chmod oug+r scripts-$version.tar.bz2
-rm -rf scripts-$version
+git clone git.dabbelt.com:palmer/software/local palmer-scripts-$version
+tar -c palmer-scripts-$version | bzip2 > palmer-scripts-$version.tar.bz2
+chmod oug+r palmer-scripts-$version.tar.bz2
+rm -rf palmer-scripts-$version
