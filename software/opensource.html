@@ -43,24 +43,6 @@
       correct path to configure.  I anticipate this being a simple fix.<br/>
       <br/>
 
-      <b>Gentoo: dev-libs/libical-0.48 fails to patch</b><br/>
-      <a href="https://bugs.gentoo.org/show_bug.cgi?id=419821">
-	 https://bugs.gentoo.org/show_bug.cgi?id=419821</a><br/>
-      Submitted: June 5, 2012<br/>
-      A patch that was accepted by upstream was still being applied.  I removed
-      the obselete patch<br/>
-      <br/>
-
-      <b>Gentoo: app-office/orage-4.8.3 installs files outside of EPREFIX
-      </b><br/>
-      <a href="https://bugs.gentoo.org/show_bug.cgi?id=419823">
-        https://bugs.gentoo.org/show_bug.cgi?id=419823</a><br/>
-      Submitted: June 5, 2012<br/>
-      This is a pretty simple case of missing a declaration of EPREFIX during
-      the src_install phase.  I added EPREFIX in (hopefully) the correct
-      place.<br/>
-      <br/>
-
       <br/> <br/> <br/> <br/>
       <h1>Resolved Bugs</h1>
 
@@ -184,6 +166,26 @@
       some of them, and I got enough done that it'll work on Linux. <br/>
       The patch was semi-accepted, some of the Solaris stuff might not actually
       build, but it's just going to be keyworded there for now.<br/>
+      <br/>
+
+      <b>Gentoo: dev-libs/libical-0.48 fails to patch</b><br/>
+      <a href="https://bugs.gentoo.org/show_bug.cgi?id=419821">
+	 https://bugs.gentoo.org/show_bug.cgi?id=419821</a><br/>
+      Submitted: June 5, 2012<br/>
+      Resolved: June 5, 2012<br/>
+      A patch that was accepted by upstream was still being applied.  I removed
+      the obselete patch<br/>
+      <br/>
+
+      <b>Gentoo: app-office/orage-4.8.3 installs files outside of EPREFIX
+      </b><br/>
+      <a href="https://bugs.gentoo.org/show_bug.cgi?id=419823">
+        https://bugs.gentoo.org/show_bug.cgi?id=419823</a><br/>
+      Submitted: June 5, 2012<br/>
+      Resolved: June 5, 2012<br/>
+      This is a pretty simple case of missing a declaration of EPREFIX during
+      the src_install phase.  I added EPREFIX in (hopefully) the correct
+      place.<br/>
       <br/>
 
   </body>
