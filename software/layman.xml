@@ -2,7 +2,7 @@
 <!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
 <repositories xmlns="" version="1.0">
   <repo priority="50" quality="experimental" status="unofficial">
-    <name>palmerdabbelt</name>
+    <name>palmer</name>
     <description>Palmer Dabbelt's Overlay</description>
     <homepage>https://sourceforge.net/u/palmerdabbelt/portage</homepage>
     <owner>
