@@ -10,13 +10,4 @@
     </owner>
     <source type="git">git://github.com/palmer-dabbelt/portage.git</source>
   </repo>
-  <repo priority="50" quality="experimental" status="unofficial">
-    <name>palmerdabbelt-prefix</name>
-    <description>Palmer Dabbelt's Overlay</description>
-    <homepage>https://sourceforge.net/u/palmerdabbelt/portage</homepage>
-    <owner>
-      <email>palmer.dabbelt@gmail.com</email>
-    </owner>
-    <source type="git">git://github.com/palmer-dabbelt/portage-prefix.git</source>
-  </repo>
 </repositories>
