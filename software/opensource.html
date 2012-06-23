@@ -55,6 +55,17 @@
       upstream, with any luck someone will take the fix.<br/>
       <br/>
 
+      <b>Gentoo: media-libs/gegl fails to compile</b><br/>
+      <a href="https://bugs.gentoo.org/show_bug.cgi?id=371601">
+	https://bugs.gentoo.org/show_bug.cgi?id=371601</a><br/>
+      Submitted: June 14, 2011<br/>
+      Commented: June 23, 2012<br/>
+      This package used GNU C99 extensions but didn't use C99 mode, which
+      caused some build failures. <br/>
+      The bug was quite old when I found it, I just attached a patch that adds
+      "-std=gnu99" to CFLAGS which makes this package build.<br/>
+      <br/>
+
       <br/> <br/> <br/> <br/>
       <h1>Resolved Bugs</h1>
 
