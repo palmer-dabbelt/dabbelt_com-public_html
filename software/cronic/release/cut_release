@@ -1,0 +1,6 @@
+version="$1"
+
+git clone git.dabbelt.com:palmer/software/cronic cronic-$version
+tar -c cronic-$version | bzip2 > cronic-$version.tar.bz2
+chmod oug+r cronic-$version.tar.bz2
+rm -rf cronic-$version
