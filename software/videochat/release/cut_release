@@ -1,0 +1,6 @@
+version="$1"
+
+git clone git.dabbelt.com:palmer/software/videochat videochat-$version
+tar -c videochat-$version | bzip2 > videochat-$version.tar.bz2
+chmod oug+r videochat-$version.tar.bz2
+rm -rf videochat-$version
