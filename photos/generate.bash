@@ -77,8 +77,8 @@ do
 	continue
     fi
 
-    tf="$outdir/$file/thumb.jpeg"
-    ff="$outdir/$file/full.jpeg"
+    tf="$file/thumb.jpeg"
+    ff="$file/full.jpeg"
 
     # Sometimes generates a table break
     if [[ "$col" == "5" ]]
