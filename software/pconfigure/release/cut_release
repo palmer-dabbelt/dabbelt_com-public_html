@@ -1,6 +1,17 @@
-version="$1"
+#!/bin/bash -ex
 
-git clone git.dabbelt.com:palmer/software/pconfigure pconfigure-$version
-tar -c pconfigure-$version | bzip2 > pconfigure-$version.tar.bz2
-chmod oug+r pconfigure-$version.tar.bz2
-rm -rf pconfigure-$version
+top="$(pwd)"
+package="$(basename $(dirname $(pwd)))"
+
+cd $HOME/.local/src/$package
+git fetch --all
+
+cat $top/Manifest | while read version
+do
+    git archive \
+	v$version \
+	--prefix $package-$version/ \
+	-o $top/$package-$version.tar.gz
+done
+
+touch $top/release.stamp
