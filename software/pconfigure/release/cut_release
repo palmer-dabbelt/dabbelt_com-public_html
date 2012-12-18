@@ -1,17 +1,1 @@
-#!/bin/bash
-
-top="$(pwd)"
-package="$(basename $(dirname $(pwd)))"
-
-cd $HOME/.local/src/$package
-git fetch --all
-
-cat $top/Manifest | while read version
-do
-    git archive \
-	v$version \
-	--prefix $package-$version/ \
-	-o $top/$package-$version.tar.gz
-done
-
-touch $top/release.stamp
+../../cut_release
