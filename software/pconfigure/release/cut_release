@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash
 
 top="$(pwd)"
 package="$(basename $(dirname $(pwd)))"
