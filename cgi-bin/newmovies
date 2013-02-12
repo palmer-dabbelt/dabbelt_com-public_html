@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo -e "Content-type: text/html\r\n\r\n"
+
+echo "<html>"
+echo "<head>"
+echo "<title>New Movies</title>"
+echo "</head>"
+
+echo "<body>"
+
+echo "<pre>"
+cd /home/media/video
+find * -type f -print0 \
+    | xargs -0 stat --format '%Y :%y %n' \
+    | sort -nr \
+    | cut -d: -f2- \
+    | cut -d' ' -f4-
+find * -type l -print0 \
+    | xargs -0 stat --format '%Y :%y %n' \
+    | sort -nr \
+    | cut -d: -f2- \
+    | cut -d' ' -f4- \
+    | head -n30
+echo "</pre>"
+
+echo "</body>"
+
+echo "</html>"
