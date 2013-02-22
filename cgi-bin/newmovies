@@ -10,6 +10,8 @@ echo "</head>"
 echo "<body>"
 
 echo "<pre>"
+
+echo "<b>/home/media/video:</b>"
 cd /home/media/video
 find * -type f -print0 \
     | xargs -0 stat --format '%Y :%y %n' \
@@ -26,6 +28,7 @@ find * -type l -print0 \
 echo ""
 echo ""
 
+echo "<b>/home/media/scratch:</b>"
 cd /home/media/scratch
 find * -type f -maxdepth 1 -print0 \
     | xargs -0 du -h
