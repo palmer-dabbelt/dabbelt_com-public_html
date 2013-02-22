@@ -22,6 +22,13 @@ find * -type l -print0 \
     | cut -d: -f2- \
     | cut -d' ' -f4- \
     | head -n30
+
+echo ""
+echo ""
+
+cd /home/media/scratch
+find * -type f -maxdepth 1 -print0 \
+    | xargs -0 du -h
 echo "</pre>"
 
 echo "</body>"
