@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ "$(hostname)" != "berkeley.dabbelt.com" ]]
+then
+    ssh berkeley.dabbelt.com /home/palmer/public_html/cgi-bin/newmovies
+    exit $?
+fi
+
 echo -e "Content-type: text/html\r\n\r\n"
 
 echo "<html>"
@@ -32,6 +38,18 @@ echo "<b>/home/media/scratch:</b>"
 cd /home/media/scratch
 find * -type f -maxdepth 1 -print0 \
     | xargs -0 du -h
+
+echo ""
+echo ""
+
+echo "<b>media@privatelayer.dabbelt.com:</b>"
+ssh media@privatelayer.dabbelt.com "transmission-remote -t all -l"
+
+echo ""
+echo ""
+
+date
+
 echo "</pre>"
 
 echo "</body>"
