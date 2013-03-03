@@ -1,4 +1,4 @@
 ExpiresActive On
-ExpiresDefault "access plus 1 day"
+ExpiresDefault "access plus 1 hour"
 
 ExpiresByType text/calendar "now"
